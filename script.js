@@ -112,12 +112,12 @@ function copyText(id){
 
 document.getElementById("search").addEventListener("keyup",searchNotes)
 function searchNotes(){
-    let searchTxt = document.getElementById("search").value
+    let searchTxt = document.getElementById("search").value.toLowerCase()
     let noteCard = document.getElementsByClassName("notes")
-    // console.log(Array.from(noteCard))
     Array.from(noteCard).forEach(function(element,index){
         let txt = element.getElementsByTagName("p")
-        if(txt[0].innerText.includes(searchTxt)){
+
+        if(txt[0].innerText.toLowerCase().includes(searchTxt)){
             element.style.display = "block"
         }
         else{
