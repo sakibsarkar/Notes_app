@@ -135,3 +135,15 @@ function searchNotes() {
         }
     })
 }
+
+document.querySelector(".clear").addEventListener("click",function(){
+    let passCode = prompt(`Type "Delete69" to continue the proccess`)
+    if(passCode === "Delete69"){
+        localStorage.removeItem("myNotes")
+        location.reload()
+    }
+    else{
+        alert("type error")
+    }
+
+})
