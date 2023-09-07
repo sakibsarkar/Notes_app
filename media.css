@@ -30,11 +30,66 @@
     }
 }
 
-@media screen and (min-width: 401px) and (max-width: 720px) {}
+@media screen and (min-width: 401px) and (max-width: 720px) {
+    ul {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-@media screen and (min-width: 721px) and (max-width: 1280px) {}
 
-@media screen and (min-width: 1281px) and (max-width: 1440px) {}
+    .tools input {
+        width: 60%;
+    }
+
+    #noteList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .notes {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 950px) {
+ 
+    .tools input {
+        width: 60%;
+    }
+
+    #noteList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .notes {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1440px) {
+    .tools input {
+        width: 572.4px;
+    }
+
+    #noteList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .notes {
+        width: 702.7px;
+    }
+}
 
 @media screen and (min-width: 1441px) and (max-width: 1920px) {}
 
