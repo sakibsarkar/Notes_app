@@ -106,7 +106,7 @@ function copyText(id) {
         document.querySelector(`.copyBtn${id}`).appendChild(span)
         setTimeout(function () {
             document.querySelector(`.copyBtn${id}`).removeChild(span)
-        }, 750)
+        }, 900)
        
         let copyContent = document.querySelector(`.copyTxt${id}`)
         let textArea = document.createElement("textArea")

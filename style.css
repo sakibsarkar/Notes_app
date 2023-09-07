@@ -143,10 +143,11 @@ ul li i {
     background-color: #00cecb;
     animation: copy 1s ease-in-out;
     padding: 2px 20px;
-    font-size: 10px;
-    
-    /* -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+    font-size: 12px;
+    border-radius: 3px;
+    padding-bottom: 8px;
+    height: 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 73% 80%, 63% 100%, 52% 80%, 0 80%);
 
 
 }
