@@ -104,13 +104,15 @@ ul li i {
     padding: 0 0 0 10px;
 
 }
-.fa-list-check{
+
+.fa-list-check {
     font-size: 15px;
 }
-.textContent h1{
+
+.textContent h1 {
     color: #00cec9;
     display: flex;
-   
+
     align-items: center;
     gap: 10px;
 }
@@ -129,4 +131,39 @@ ul li i {
     margin: 10px 0 0 0;
 }
 
+.copyBtn {
+    position: relative;
+}
 
+.copied {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    color: #ffffff;
+    background-color: #00cecb;
+    animation: copy 1s ease-in-out;
+    padding: 2px 20px;
+    font-size: 10px;
+    
+    /* -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+
+
+}
+
+@keyframes copy {
+    0% {
+        display: inline;
+        opacity: 0;
+    }
+    50% {
+        display: inline;
+        opacity: 1;
+        top: -20px;
+    }
+    100%{
+        opacity: 0;
+        top: -20px;
+        display: none;
+    }
+}
