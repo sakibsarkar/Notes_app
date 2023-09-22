@@ -5,15 +5,20 @@ autoShowNotes()
 // 
 // let notelist = []
 
+
+
 document.getElementById("noteTxt").addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
         addItemsOnLocalStrg()
+
     }
+
 })
 addBtn.addEventListener("click", addItemsOnLocalStrg)
 
 
 function addItemsOnLocalStrg() {
+    console.clear()
     if (noteAdd.value.length == 0) {
         alert("Write something Before adding something on the list")
         return
@@ -101,23 +106,23 @@ function copyText(id) {
     sound.src = "copy.flac"
     sound.play()
     let span = document.createElement("span")
-        span.innerHTML = `Copied`
-        span.classList.add("copied")
-        document.querySelector(`.copyBtn${id}`).appendChild(span)
-        setTimeout(function () {
-            document.querySelector(`.copyBtn${id}`).removeChild(span)
-        }, 900)
-       
-        let copyContent = document.querySelector(`.copyTxt${id}`)
-        let textArea = document.createElement("textArea")
-        textArea.value = copyContent.innerText
-        document.body.appendChild(textArea)
-        textArea.select()
-        document.execCommand("copy")
-        document.body.removeChild(textArea)
+    span.innerHTML = `Copied`
+    span.classList.add("copied")
+    document.querySelector(`.copyBtn${id}`).appendChild(span)
+    setTimeout(function () {
+        document.querySelector(`.copyBtn${id}`).removeChild(span)
+    }, 900)
+
+    let copyContent = document.querySelector(`.copyTxt${id}`)
+    let textArea = document.createElement("textArea")
+    textArea.value = copyContent.innerText
+    document.body.appendChild(textArea)
+    textArea.select()
+    document.execCommand("copy")
+    document.body.removeChild(textArea)
 
 
-    }
+}
 
 
 document.getElementById("search").addEventListener("keyup", searchNotes)
@@ -136,13 +141,13 @@ function searchNotes() {
     })
 }
 
-document.querySelector(".clear").addEventListener("click",function(){
+document.querySelector(".clear").addEventListener("click", function () {
     let passCode = prompt(`Type "Delete69" to continue the proccess`)
-    if(passCode === "Delete69"){
+    if (passCode === "Delete69") {
         localStorage.removeItem("myNotes")
         location.reload()
     }
-    else{
+    else {
         alert("type error")
     }
 

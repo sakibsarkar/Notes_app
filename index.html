@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,20 @@
     <link rel="stylesheet" href="media.css">
     <title>Notes app</title>
 </head>
+
 <body>
     <script src="https://kit.fontawesome.com/19c0e07b44.js" crossorigin="anonymous"></script>
 
     <nav>
         <ul>
-            <li><h1>My Notes <i class="fa-solid fa-message"></i></h1></li>
+            <li>
+                <h1>My Notes <i class="fa-solid fa-message"></i></h1>
+            </li>
             <li>
                 <div class="searchDiv">
-                <input type="text" placeholder="search" id="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+                    <input type="text" placeholder="search" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </li>
 
             <li class="clear">
@@ -27,17 +31,29 @@
     </nav>
 
     <div class="contaier 1sadf" id="container">
-        <div class="tools"><input id="noteTxt" placeholder="Write Something To Add On List" type="text"> <button id="addBtn">Add to list <i class="fa-regular fa-square-plus"></i></button></div>
+        <div class="tools"><input id="noteTxt" placeholder="Write Something To Add On List" type="text"> <button
+                id="addBtn">Add to list <i class="fa-regular fa-square-plus"></i></button></div>
         <div class="listFlex">
             <div id="noteList">
-                
+
                 <!-- list item will show here -->
             </div>
+        </div>
+
     </div>
-        
-    </div>
-    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function (registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
