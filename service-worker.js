@@ -8,6 +8,8 @@ self.addEventListener('install', function (event) {
                 './style.css',
                 './script.js',
                 './media.css'
+
+
                 // Add more resources to cache as needed
             ]);
         })

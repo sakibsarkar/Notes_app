@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
 
 
 * {
@@ -7,6 +8,10 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Hind Siliguri', sans-serif;
+}
+
+.hide {
+    display: none;
 }
 
 ul {
@@ -51,7 +56,7 @@ ul li i {
 
 }
 
-.clear{
+.clear {
     background-color: rgb(255, 255, 255);
     padding: 2px 10px;
     border-radius: 6px;
@@ -59,22 +64,26 @@ ul li i {
     cursor: pointer;
     transition: all 0.5s;
 }
-.fa-trash-can{
+
+.fa-trash-can {
     transition: all 0.7s;
     color: #00cecb;
 }
-.clear:hover{
-    background-color:transparent;
+
+.clear:hover {
+    background-color: transparent;
     color: white;
     box-shadow: inset 120px 0 0 rgb(255, 11, 11);
 
-    
+
 }
-.clear:hover .fa-trash-can{
+
+.clear:hover .fa-trash-can {
     transform: rotate(360deg);
     color: #ffffff;
-    
+
 }
+
 .tools {
     display: flex;
     justify-content: center;
@@ -106,8 +115,9 @@ ul li i {
     cursor: pointer;
     transition: all ease-in-out 0.5s;
 }
-.tools button:hover{
-    background-color:transparent;
+
+.tools button:hover {
+    background-color: transparent;
     box-shadow: inset 120px 0 0 rgb(0, 200, 255);
 }
 
@@ -117,11 +127,37 @@ ul li i {
     align-items: center;
 }
 
-#noteList {
+ .noteList {
     width: 796.4px;
 }
 
+.empty {
+    width: 796.4px;
+    height: 80vh;
+    margin: auto;
+    /* background: rebeccapurple; */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.empty img {
+    height: 290px;
+}
+
+.empty span {
+    font-size: 36px;
+    color: #736993;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.empty p {
+    font-family: 'Oswald', sans-serif;
+}
 
 .notes {
     border: 1px solid #00cec9;
@@ -160,11 +196,13 @@ ul li i {
     transition: 0.5s;
     margin: 10px 0 0 0;
 }
-.noteIcon P:hover{
+
+.noteIcon P:hover {
     text-decoration: underline;
     color: #02ddff;
     transition: .5s;
 }
+
 .copyBtn {
     position: relative;
 }
@@ -191,12 +229,14 @@ ul li i {
         display: inline;
         opacity: 0;
     }
+
     50% {
         display: inline;
         opacity: 1;
         top: -20px;
     }
-    100%{
+
+    100% {
         opacity: 0;
         top: -20px;
         display: none;

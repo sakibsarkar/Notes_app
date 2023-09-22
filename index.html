@@ -25,7 +25,7 @@
             </li>
 
             <li class="clear">
-                Clear Notes <i class="fa-solid fa-trash-can"></i>
+                Clear All Notes <i class="fa-solid fa-trash-can"></i>
             </li>
         </ul>
     </nav>
@@ -34,9 +34,16 @@
         <div class="tools"><input id="noteTxt" placeholder="Write Something To Add On List" type="text"> <button
                 id="addBtn">Add to list <i class="fa-regular fa-square-plus"></i></button></div>
         <div class="listFlex">
-            <div id="noteList">
+            <div id="noteList" class="noteList">
 
                 <!-- list item will show here -->
+            </div>
+            <div class="hide" id="noNotesContainer">
+                <img src="./empty.png" alt="" srcset="">
+                <span>
+                    <p>Opss !... You Don't have any notes</p>:')
+                </span>
+                <p>add some text to diplay here : )</p>
             </div>
         </div>
 

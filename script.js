@@ -5,7 +5,25 @@ autoShowNotes()
 // 
 // let notelist = []
 
+function removeImg() {
+    let notes = JSON.parse(localStorage.getItem("myNotes"))
+    if (notes.length == 0) {
+        document.getElementById("noNotesContainer").classList.remove("hide")
+        document.getElementById("noNotesContainer").classList.add("empty")
 
+        // hiding main notescontainer
+        document.getElementById("noteList").classList.add("hide")
+        document.getElementById("noteList").classList.remove("noteList")
+    }
+    else {
+        document.getElementById("noNotesContainer").classList.add("hide")
+        document.getElementById("noNotesContainer").classList.remove("empty")
+
+        // displaying the main notes contaier
+        document.getElementById("noteList").classList.remove("hide")
+        document.getElementById("noteList").classList.add("noteList")
+    }
+}
 
 document.getElementById("noteTxt").addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
@@ -19,6 +37,8 @@ addBtn.addEventListener("click", addItemsOnLocalStrg)
 
 function addItemsOnLocalStrg() {
     console.clear()
+
+
     if (noteAdd.value.length == 0) {
         alert("Write something Before adding something on the list")
         return
@@ -34,12 +54,14 @@ function addItemsOnLocalStrg() {
         x.push(noteAdd.value)
         localStorage.setItem("myNotes", JSON.stringify(x))
         noteAdd.value = ""
+        removeImg()
     }
 
     showMyNotes()
 }
 
 function showMyNotes() {
+    console.log(autoShowNotes)
     sound.src = "added.wav"
     sound.play()
     let container = document.getElementById("noteList")
@@ -47,6 +69,9 @@ function showMyNotes() {
     child.classList.add("notes")
 
     let myNotes = JSON.parse(localStorage.getItem("myNotes"))
+
+
+
     myNotes.forEach(function (element, index) {
         child.innerHTML = `
         <div class="textContent" id="note-${index}">
@@ -70,6 +95,8 @@ function autoShowNotes() {
     if (myNotes == null) {
         return
     }
+
+    removeImg()
     myNotes.forEach(function (element, index) {
         let child = document.createElement("div")
         child.classList.add("notes")
