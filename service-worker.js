@@ -3,11 +3,11 @@ self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open('my-cache-name').then(function (cache) {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/style.css',
-                '/script.js',
-                '/media.css'
+                './',
+                './index.html',
+                './style.css',
+                './script.js',
+                './media.css'
                 // Add more resources to cache as needed
             ]);
         })
