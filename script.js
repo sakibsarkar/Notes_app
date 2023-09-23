@@ -5,6 +5,9 @@ autoShowNotes()
 // 
 // let notelist = []
 
+
+
+
 function removeImg() {
     let notes = JSON.parse(localStorage.getItem("myNotes"))
     if (notes.length == 0) {
@@ -93,6 +96,8 @@ function autoShowNotes() {
     let container = document.getElementById("noteList")
     let myNotes = JSON.parse(localStorage.getItem("myNotes"))
     if (myNotes == null) {
+        localStorage.setItem("myNotes", JSON.stringify([]))
+        removeImg()
         return
     }
 
