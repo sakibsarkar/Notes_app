@@ -1,5 +1,5 @@
 # Note app 
-## Live link - https://sakibsarkar.github.io/Notes_app/
+## Live link -[My Notes](https://sakibsarkar.github.io/Notes_app/)
 
 ### Features
 
